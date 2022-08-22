@@ -1,0 +1,84 @@
+
+:root{
+    --board-color: palevioletred;
+    --background: lavenderblush;
+    --control-panel: pink;
+}
+body{
+    background-color: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+h1{
+    font-size: 4em;
+    margin: 0px;
+}
+h2{
+    text-align: left;
+}
+p{
+    margin: 0px;
+}
+.visible{
+    visibility: visible !important;
+}
+#controls{
+    position: fixed;
+    left: 0;
+    top: 100px;
+    background-color: var(--control-panel);
+    padding: 20px;
+    margin: 0px 20px;
+    border-radius: 15px;
+    text-align: center;
+    visibility: hidden;
+}
+ul{
+    list-style-type: none;
+    display: block;
+
+}
+li{
+    padding: 5px;
+    border: 1px solid var(--board-color);
+    border-radius: 15px;
+    margin: 10px;
+}
+li:hover{
+    background-color: var(--board-color);
+    cursor: pointer;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    box-shadow: 0px 30px 50px var(--board-color);
+}
+
+.square{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--board-color);
+    color: ghostwhite;
+    font-size: 6em;
+}
+
+.square:hover{
+    cursor: pointer;
+    background-color: var(--control-panel);
+}
